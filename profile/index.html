@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/profile-styles.css">
+
+    <title>PonyoBot - 개발자 프로필</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/setting/" class="header__logo">
+                <i class="ri-settings-3-line"></i>
+            </a>
+
+            <button class="header__toggle" id="header-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__container">
+            <div class="sidebar__content">
+                <div>
+                    <h3 class="sidebar__title">메뉴</h3>
+
+                    <div class="sidebar__list">
+                        <a href="/" class="sidebar__link">
+                           <i class="ri-home-3-line"></i>
+                           <span>홈</span>
+                        </a>
+
+                        <a href="/notice/" class="sidebar__link">
+                            <i class="ri-megaphone-line"></i>
+                            <span>공지사항</span>
+                        </a>
+
+                        <a href="/update/" class="sidebar__link">
+                            <i class="ri-refresh-line"></i>
+                            <span>업데이트</span>
+                        </a>
+
+                        <a href="/apply/" class="sidebar__link">
+                            <i class="ri-file-list-3-line"></i>
+                            <span>분양신청</span>
+                        </a>
+
+                        <a href="https://blog.ponyobot.kr/posts/cmd/" class="sidebar__link">
+                            <i class="ri-terminal-box-line"></i>
+                            <span>명령어</span>
+                        </a>
+
+                        <a href="https://status.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-pulse-line"></i>
+                            <span>상태페이지</span>
+                        </a>
+
+                        <a href="https://cs.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-customer-service-2-line"></i>
+                            <span>고객센터</span>
+                        </a>
+
+                        <a href="https://blog.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-blogger-line"></i>
+                            <span>블로그</span>
+                        </a>
+
+                        <a href="/profile/" class="sidebar__link active-link">
+                            <i class="ri-user-3-line"></i>
+                            <span>개발자 프로필</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+        <section class="profile-section">        
+
+            <div class="profile-card">
+                <img src="https://ponyobot.kr/images/profile.jpg" 
+                     alt="개발자 프로필" class="profile-image">
+                
+                <h2 class="profile-name">훈이</h2>
+                <p class="profile-title">포뇨봇 전체 운영 및 관리자</p>
+                
+                <p class="profile-description">
+                    안녕하세요! 포뇨봇을 개발하고 운영하는 개발자입니다. 
+                    사용자들에게 더 나은 서비스를 제공하기 위해 항상 노력하고 있습니다. 
+                    포뇨봇과 관련된 문의사항이나 제안사항이 있으시면 언제든지 연락해주세요!
+                </p>
+
+                <div class="contact-section">
+                    <h3 class="contact-title">관리자 연락처</h3>
+                    <div class="contact-links">
+                        <a href="https://github.com/ponyobot" target="_blank" class="contact-link github-link">
+                            <i class="ri-github-fill"></i>
+                            <span>GitHub</span>
+                        </a>
+                        
+                        <a href="https://open.kakao.com/me/ponyobot_dev" target="_blank" class="contact-link kakao-link">
+                            <i class="ri-chat-3-fill"></i>
+                            <span>오픈카카오톡</span>
+                        </a>
+                        
+                        <a href="mailto:admin@ponyobot.kr" class="contact-link email-link">
+                            <i class="ri-mail-fill"></i>
+                            <span>이메일</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="credits-section">
+                <h3 class="credits-title">출처</h3>
+                
+                <div class="credits-category">
+                    <h4 class="credits-category-title">
+                        <i class="ri-image-line"></i>
+                        이미지 출처
+                    </h4>
+                    <div class="credits-list">
+                        • 프로필 이미지: <a href="https://unsplash.com" target="_blank" class="credits-link">Unsplash</a><br>
+                        • 배경 이미지: <a href="https://pexels.com" target="_blank" class="credits-link">Pexels</a><br>
+                        • 아이콘 이미지: <a href="https://pixabay.com" target="_blank" class="credits-link">Pixabay</a><br>
+                        • 일러스트: <a href="https://freepik.com" target="_blank" class="credits-link">Freepik</a><br>
+                        • 로고 이미지: <a href="https://flaticon.com" target="_blank" class="credits-link">Flaticon</a><br>
+                        • 기타 이미지: <a href="https://stockvault.net" target="_blank" class="credits-link">StockVault</a>
+                    </div>
+                </div>
+
+                <div class="credits-category">
+                    <h4 class="credits-category-title">
+                        <i class="ri-global-line"></i>
+                        사이트 출처
+                    </h4>
+                    <div class="credits-list">
+                        • 디자인 템플릿: <a href="https://bedimcode.com" target="_blank" class="credits-link">Bedimcode</a>
+                    </div>
+                </div>
+
+                <div class="credits-category">
+                    <h4 class="credits-category-title">
+                        <i class="ri-star-line"></i>
+                        아이콘 출처
+                    </h4>
+                    <div class="credits-list">
+                        • 모든 아이콘: <a href="https://remixicon.com" target="_blank" class="credits-link">Remix Icon</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">© 2025 PonyoBot. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+/*=============== PROFILE CONTENT ===============*/
+.profile-section {
+  padding: 2rem 0;
+}
+
+.profile-card {
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+  border: 4px solid var(--first-color);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem;
+}
+
+.profile-title {
+  color: var(--first-color);
+  margin-bottom: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.profile-description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-section {
+  margin-top: 2rem;
+}
+
+.contact-title {
+  font-size: 1.2rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--body-color);
+  border: 2px solid var(--shadow-color);
+  border-radius: 2rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  font-weight: var(--font-semi-bold);
+}
+
+.contact-link i {
+  font-size: 1.2rem;
+}
+
+.contact-link:hover {
+  background-color: var(--first-color);
+  color: white;
+  border-color: var(--first-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+/*=============== CREDITS SECTION ===============*/
+.credits-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px var(--shadow-color);
+  border: 1px solid var(--shadow-color);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.credits-title {
+  font-size: 1.2rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.credits-category {
+  margin-bottom: 1.5rem;
+}
+
+.credits-category:last-child {
+  margin-bottom: 0;
+}
+
+.credits-category-title {
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.credits-category-title i {
+  font-size: 1rem;
+}
+
+.credits-list {
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  line-height: 1.5;
+  padding-left: 1.5rem;
+}
+
+.credits-link {
+  color: var(--first-color);
+  transition: opacity 0.3s ease;
+}
+
+.credits-link:hover {
+  opacity: 0.8;
+}
+
+/*=============== PROFILE RESPONSIVE ===============*/
+/* For small devices */
+@media screen and (max-width: 360px) {
+  .profile-card {
+    padding: 1.5rem;
+    margin-inline: 1rem;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-link {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .credits-section {
+    margin-inline: 1rem;
+    padding: 1.5rem;
+  }
+
+  .credits-category-title {
+    font-size: var(--smaller-font-size);
+  }
+
+  .credits-list {
+    font-size: var(--tiny-font-size);
+    padding-left: 1rem;
+  }
+}

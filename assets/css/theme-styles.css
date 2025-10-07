@@ -1,0 +1,178 @@
+/*=============== THEME PAGE ===============*/
+.theme-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.theme-item {
+  background-color: var(--body-color);
+  box-shadow: 0 2px 24px var(--shadow-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.theme-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.theme-info i {
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.theme-info span {
+  font-size: 1.1rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+/*=============== THEME DROPDOWN ===============*/
+.theme-selector {
+  position: relative;
+  width: 250px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.theme-btn {
+  all: initial;
+  display: flex !important;
+  font-family: var(--body-font) !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.75rem 1rem !important;
+  background-color: var(--body-color) !important;
+  border: 2px solid var(--shadow-color) !important;
+  border-radius: 0.75rem !important;
+  color: var(--title-color) !important;
+  font-size: var(--normal-font-size) !important;
+  font-weight: var(--font-semi-bold) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  line-height: normal !important;
+  text-align: left !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.theme-btn:hover {
+  border-color: var(--first-color) !important;
+}
+
+.theme-btn span {
+  flex: 1;
+  text-align: left;
+}
+
+.theme-btn i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.theme-options {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background-color: var(--body-color);
+  box-shadow: 0 8px 24px var(--shadow-color);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 1px solid var(--shadow-color);
+}
+
+.theme-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+  background-color: var(--shadow-color);
+  color: var(--first-color);
+}
+
+.theme-option:hover > i:first-child {
+  color: var(--first-color);
+}
+
+.theme-option > i:first-child {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.theme-option span {
+  font-weight: var(--font-semi-bold);
+  flex: 1;
+}
+
+.option-check {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.theme-option.selected .option-check {
+  opacity: 1;
+}
+
+.theme-option.selected > i:first-child {
+  color: var(--first-color);
+}
+
+/*=============== RESPONSIVE THEME ===============*/
+@media screen and (max-width: 768px) {
+  .theme-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .theme-selector {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .theme-item {
+    padding: 1rem;
+  }
+  
+  .theme-info span {
+    font-size: 1rem;
+  }
+}

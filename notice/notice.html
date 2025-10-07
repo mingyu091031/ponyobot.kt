@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS FILES ===============-->
+    <!-- 기본 스타일 -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- 업데이트 페이지 스타일 -->
+    <link rel="stylesheet" href="../assets/css/notice-styles.css">
+
+    <title>업데이트 - ponyobot</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/setting/" class="header__logo">
+                <i class="ri-settings-3-line"></i>
+            </a>
+
+            <button class="header__toggle" id="header-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__container">
+            <div class="sidebar__content">
+                <div>
+                    <h3 class="sidebar__title">메뉴</h3>
+
+                    <div class="sidebar__list">
+                        <a href="/" class="sidebar__link">
+                           <i class="ri-home-3-line"></i>
+                           <span>홈</span>
+                        </a>
+
+                        <a href="/notice/" class="sidebar__link active-link">
+                            <i class="ri-megaphone-line"></i>
+                            <span>공지사항</span>
+                        </a>
+
+                        <a href="/update/" class="sidebar__link">
+                            <i class="ri-refresh-line"></i>
+                            <span>업데이트</span>
+                        </a>
+
+                        <a href="/apply/" class="sidebar__link">
+                            <i class="ri-file-list-3-line"></i>
+                            <span>분양신청</span>
+                        </a>
+
+                        <a href="https://blog.ponyobot.kr/posts/cmd/" class="sidebar__link">
+                            <i class="ri-terminal-box-line"></i>
+                            <span>명령어</span>
+                        </a>
+
+                        <a href="https://status.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-pulse-line"></i>
+                            <span>상태페이지</span>
+                        </a>
+
+                        <a href="https://cs.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-customer-service-2-line"></i>
+                            <span>고객센터</span>
+                        </a>
+
+                        <a href="https://blog.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-blogger-line"></i>
+                            <span>블로그</span>
+                        </a>
+
+                        <a href="/profile/" class="sidebar__link">
+                            <i class="ri-user-3-line"></i>
+                            <span>개발자 프로필</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+        <div class="notice-header">
+            <h1>업데이트</h1>
+            <p class="notice-subtitle">ponyobot의 최신 업데이트 내역을 확인하세요</p>
+        </div>
+
+        <div class="notice-container">
+            <div class="notice-item">
+                <div class="notice-header-item" data-target="notice-1">
+                    <div class="notice-info">
+                        <h3 class="notice-title">v2.1.0 - 새로운 기능 추가</h3>
+                        <span class="notice-date">2024년 3월 15일</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line notice-arrow"></i>
+                </div>
+                <div class="notice-content" id="notice-1">
+                    <div class="notice-body">
+                        <h4>🎉 새로운 기능</h4>
+                        <ul>
+                            <li>음악 재생 기능 추가</li>
+                            <li>게임 명령어 확장</li>
+                            <li>사용자 레벨 시스템 도입</li>
+                        </ul>
+                        
+                        <h4>🔧 개선사항</h4>
+                        <ul>
+                            <li>명령어 응답 속도 향상</li>
+                            <li>메모리 사용량 최적화</li>
+                            <li>안정성 개선</li>
+                        </ul>
+                        
+                        <h4>🛠 버그 수정</h4>
+                        <ul>
+                            <li>특정 명령어에서 발생하던 오류 수정</li>
+                            <li>임베드 메시지 표시 오류 해결</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notice-item">
+                <div class="notice-header-item" data-target="notice-2">
+                    <div class="notice-info">
+                        <h3 class="notice-title">v2.0.5 - 보안 업데이트</h3>
+                        <span class="notice-date">2024년 3월 10일</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line notice-arrow"></i>
+                </div>
+                <div class="notice-content" id="notice-2">
+                    <div class="notice-body">
+                        <h4>🔒 보안 강화</h4>
+                        <ul>
+                            <li>사용자 인증 시스템 개선</li>
+                            <li>데이터 암호화 강화</li>
+                            <li>악성 명령어 필터링 추가</li>
+                        </ul>
+                        
+                        <h4>🔧 개선사항</h4>
+                        <ul>
+                            <li>데이터베이스 성능 최적화</li>
+                            <li>로그 시스템 개선</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notice-item">
+                <div class="notice-header-item" data-target="notice-3">
+                    <div class="notice-info">
+                        <h3 class="notice-title">v2.0.0 - 메이저 업데이트</h3>
+                        <span class="notice-date">2024년 3월 1일</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line notice-arrow"></i>
+                </div>
+                <div class="notice-content" id="notice-3">
+                    <div class="notice-body">
+                        <h4>🚀 주요 변경사항</h4>
+                        <ul>
+                            <li>전체 아키텍처 재설계</li>
+                            <li>새로운 사용자 인터페이스</li>
+                            <li>향상된 모듈러 시스템</li>
+                        </ul>
+                        
+                        <h4>🎨 디자인 개선</h4>
+                        <ul>
+                            <li>더 직관적인 명령어 구조</li>
+                            <li>개선된 도움말 시스템</li>
+                            <li>반응형 웹 대시보드</li>
+                        </ul>
+                        
+                        <h4>⚠️ 호환성 주의사항</h4>
+                        <ul>
+                            <li>일부 구버전 명령어 변경</li>
+                            <li>설정 파일 형식 변경</li>
+                            <li>플러그인 API 업데이트</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notice-item">
+                <div class="notice-header-item" data-target="notice-4">
+                    <div class="notice-info">
+                        <h3 class="notice-title">v1.9.2 - 핫픽스</h3>
+                        <span class="notice-date">2024년 2월 28일</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line notice-arrow"></i>
+                </div>
+                <div class="notice-content" id="notice-4">
+                    <div class="notice-body">
+                        <h4>🛠 긴급 수정</h4>
+                        <ul>
+                            <li>서버 크래시 문제 해결</li>
+                            <li>메모리 누수 문제 수정</li>
+                            <li>데이터 손실 방지 패치</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notice-item">
+                <div class="notice-header-item" data-target="notice-5">
+                    <div class="notice-info">
+                        <h3 class="notice-title">v1.9.1 - 기능 개선</h3>
+                        <span class="notice-date">2024년 2월 20일</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line notice-arrow"></i>
+                </div>
+                <div class="notice-content" id="notice-5">
+                    <div class="notice-body">
+                        <h4>✨ 새로운 기능</h4>
+                        <ul>
+                            <li>자동 응답 시스템</li>
+                            <li>커스텀 명령어 생성</li>
+                            <li>통계 대시보드</li>
+                        </ul>
+                        
+                        <h4>🔧 개선사항</h4>
+                        <ul>
+                            <li>명령어 처리 속도 20% 향상</li>
+                            <li>UI/UX 개선</li>
+                            <li>다국어 지원 확장</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">© 2025 PonyoBot. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/notice.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>

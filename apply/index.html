@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/apply-styles.css">
+
+    <title>분양신청 - ponyobot</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/setting/" class="header__logo">
+                <i class="ri-settings-3-line"></i>
+            </a>
+
+            <button class="header__toggle" id="header-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__container">
+            <div class="sidebar__content">
+                <div>
+                    <h3 class="sidebar__title">메뉴</h3>
+
+                    <div class="sidebar__list">
+                        <a href="/" class="sidebar__link">
+                           <i class="ri-home-3-line"></i>
+                           <span>홈</span>
+                        </a>
+
+                        <a href="/notice/" class="sidebar__link">
+                            <i class="ri-megaphone-line"></i>
+                            <span>공지사항</span>
+                        </a>
+
+                        <a href="/update/" class="sidebar__link">
+                            <i class="ri-refresh-line"></i>
+                            <span>업데이트</span>
+                        </a>
+
+                        <a href="/apply/" class="sidebar__link active-link">
+                            <i class="ri-file-list-3-line"></i>
+                            <span>분양신청</span>
+                        </a>
+
+                        <a href="https://blog.ponyobot.kr/posts/cmd/" class="sidebar__link">
+                            <i class="ri-terminal-box-line"></i>
+                            <span>명령어</span>
+                        </a>
+
+                        <a href="https://status.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-pulse-line"></i>
+                            <span>상태페이지</span>
+                        </a>
+
+                        <a href="https://cs.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-customer-service-2-line"></i>
+                            <span>고객센터</span>
+                        </a>
+
+                        <a href="https://blog.ponyobot.kr/" class="sidebar__link">
+                            <i class="ri-blogger-line"></i>
+                            <span>블로그</span>
+                        </a>
+
+                        <a href="/profile/" class="sidebar__link">
+                            <i class="ri-user-3-line"></i>
+                            <span>개발자 프로필</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+        <h1 class="apply-title">분양신청</h1>
+
+        <!--=============== SERVICE SELECTION ===============-->
+        <section class="apply-section">
+            <div class="apply-service-cards">
+                <!-- 입퇴장봇 분양 -->
+                <div class="apply-card" data-service="ponyobot">
+                    <div class="apply-card-icon">
+                        <i class="ri-robot-2-line"></i>
+                    </div>
+                    <h2 class="apply-card-title">입퇴장봇 분양</h2>
+                    <div class="apply-card-price">
+                        <span class="apply-price-amount">2,000원</span>
+                        <span class="apply-price-period">/월</span>
+                    </div>
+                    <p class="apply-card-description">
+                        디스코드 스타일의 대화형 봇 서비스로, 대화 요약, 출석 관리, 날씨 정보, 입퇴장 감지 등 다양한 기능을 제공합니다.
+                    </p>
+                    <ul class="apply-card-features">
+                        <li><i class="ri-check-line"></i> 대화 요약 기능</li>
+                        <li><i class="ri-check-line"></i> 출석 관리 시스템</li>
+                        <li><i class="ri-check-line"></i> 실시간 날씨 정보</li>
+                        <li><i class="ri-check-line"></i> 입퇴장 감지 및 알림</li>
+                    </ul>
+                    <button class="apply-card-button" onclick="selectService('ponyobot')">
+                        신청하기
+                    </button>
+                </div>
+
+                <!-- irispy2 제작 -->
+                <div class="apply-card apply-card-custom" data-service="custom">
+                    <div class="apply-card-icon">
+                        <i class="ri-code-s-slash-line"></i>
+                    </div>
+                    <h2 class="apply-card-title">irispy2 제작</h2>
+                    <div class="apply-card-price">
+                        <span class="apply-price-amount">맞춤 견적</span>
+                    </div>
+                    <p class="apply-card-description">
+                        원하시는 기능을 말씀해주시면 맞춤형 봇을 제작하여 대신 돌려드립니다.
+                    </p>
+                    <ul class="apply-card-features">
+                        <li><i class="ri-check-line"></i> 맞춤형 봇 제작</li>
+                        <li><i class="ri-check-line"></i> 대신 운영 또는 직접 운영 선택</li>
+                        <li><i class="ri-check-line"></i> 소스코드 제공 (직접 운영 시)</li>
+                        <li><i class="ri-check-line"></i> 상세 가격 상담 가능</li>
+                    </ul>
+                    <button class="apply-card-button" onclick="selectService('custom')">
+                        상담하기
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== AGREEMENT SECTION ===============-->
+        <section class="agreement-section" id="agreement-section" style="display: none;">
+            <div class="agreement-container">
+                <button class="apply-back-button" onclick="backToServices()">
+                    <i class="ri-arrow-left-line"></i> 서비스 선택으로 돌아가기
+                </button>
+
+                <div class="agreement-header">
+                    <h2 class="agreement-title" id="agreement-title">입퇴장봇 분양 신청</h2>
+                    <p class="agreement-subtitle" id="agreement-subtitle">월 2,000원</p>
+                </div>
+
+                <div class="agreement-box">
+                    <h3 class="agreement-box-title">
+                        <i class="ri-shield-check-line"></i> 약관 동의
+                    </h3>
+                    
+                    <div class="agreement-list">
+                        <div class="agreement-item">
+                            <input type="checkbox" id="agree-terms-pre" class="agreement-checkbox" required>
+                            <label for="agree-terms-pre" class="agreement-label">
+                                <a href="https://blog.ponyobot.kr/posts/policy/" target="_blank">이용약관</a>에 동의합니다 (필수)
+                            </label>
+                        </div>
+                        
+                        <div class="agreement-item">
+                            <input type="checkbox" id="agree-privacy-pre" class="agreement-checkbox" required>
+                            <label for="agree-privacy-pre" class="agreement-label">
+                                <a href="https://blog.ponyobot.kr/posts/privacypolicy/" target="_blank">개인정보처리방침</a>에 동의합니다 (필수)
+                            </label>
+                        </div>
+                        
+                        <div class="agreement-item agreement-ponyobot-refund">
+                            <input type="checkbox" id="agree-refund-pre" class="agreement-checkbox" required>
+                            <label for="agree-refund-pre" class="agreement-label">
+                                환불규정을 확인했습니다 (거래 완료 후 24시간 이내 환불 가능)
+                            </label>
+                        </div>
+                        
+                        <div class="agreement-item agreement-custom-refund" style="display: none;">
+                            <input type="checkbox" id="agree-custom-refund-pre" class="agreement-checkbox">
+                            <label for="agree-custom-refund-pre" class="agreement-label">
+                                환불규정을 확인했습니다 (소스코드 수령 시 환불 불가)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 약관 동의 완료 메시지 -->
+                    <div class="agreement-success-message" id="agreement-success-message" style="display: none;">
+                        <div class="agreement-success-icon">
+                            <i class="ri-checkbox-circle-line"></i>
+                        </div>
+                        <h3 class="agreement-success-title">약관 동의 완료!</h3>
+                        <p class="agreement-success-text">
+                            카카오톡 오픈채팅에서 신청을 진행해주세요.<br>
+                            개발자가 24시간 이내에 연락드릴 예정입니다.
+                        </p>
+                        <button class="agreement-kakao-button" onclick="proceedToKakaoChat()">
+                            <i class="ri-kakao-talk-line"></i>
+                            <span>카카오톡 오픈채팅으로 이동</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 안내사항 -->
+                <div class="apply-info-box">
+                    <h3 class="apply-info-title">
+                        <i class="ri-information-line"></i> 안내사항
+                    </h3>
+                    <ul class="apply-info-list">
+                        <li>약관 동의 후 카카오톡 오픈채팅에서 신청을 진행해주세요.</li>
+                        <li>신청 후 24시간 이내에 개발자가 연락드립니다.</li>
+                        <li>공식 사이트: <a href="https://ponyobot.kr/" target="_blank">https://ponyobot.kr/</a></li>
+                        <li>명령어 안내: <a href="https://blog.ponyobot.kr/posts/cmd/" target="_blank">https://blog.ponyobot.kr/posts/cmd/</a></li>
+                    </ul>
+                    <div class="apply-contact">
+                        <p><i class="ri-kakao-talk-line"></i> <a href="https://open.kakao.com/me/ponyobot_dev" target="_blank">카카오톡 문의</a></p>
+                        <p><i class="ri-mail-line"></i> <a href="mailto:admin@ponyobot.kr">admin@ponyobot.kr</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">© 2025 PonyoBot. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/apply.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
