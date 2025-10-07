@@ -15,6 +15,318 @@
 .update-subtitle {
   color: var(--text-color);
   font-size: var(--normal-font-size);
+  opacity: 0.8;
+}
+
+.update-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.update-item {
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px var(--shadow-color);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.update-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+.update-header-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.update-header-item:hover {
+  background-color: rgba(228, 238, 255, 0.2);
+}
+
+.dark-theme .update-header-item:hover {
+  background-color: rgba(72, 85, 126, 0.2);
+}
+
+.update-info {
+  flex-grow: 1;
+}
+
+.update-title {
+  color: var(--title-color);
+  font-size: 1.25rem;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.update-date {
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  opacity: 0.8;
+}
+
+.update-arrow {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.update-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.update-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.update-content.active {
+  max-height: 3000px;
+}
+
+.update-body {
+  padding: 1.8rem 2.2rem 2rem;
+  border-top: 2px solid var(--first-color);
+  background: linear-gradient(to bottom, rgba(228, 238, 255, 0.15), transparent);
+}
+
+.dark-theme .update-body {
+  background: linear-gradient(to bottom, rgba(72, 85, 126, 0.15), transparent);
+}
+
+.update-body h4 {
+  color: var(--first-color);
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  margin: 1.2rem 0 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+.update-body h4:first-child {
+  margin-top: 0.5rem;
+}
+
+.update-body ul {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0.8rem;
+  padding-left: 0;
+}
+
+.update-body li {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.3rem;
+  line-height: 1.6;
+}
+
+.update-body li::before {
+  content: "•";
+  color: var(--first-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* 업데이트 푸터 */
+.update-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: var(--smaller-font-size);
+}
+
+.dark-theme .update-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.update-number {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 0.9rem;
+}
+
+.update-updated {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* Loading animation */
+.update-content.loading {
+  opacity: 0.7;
+}
+
+/* 빈 상태 */
+.update-item .empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.update-item .empty-state i {
+  font-size: 3rem;
+  color: var(--first-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.update-item .empty-state h3 {
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.update-item .empty-state p {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/*=============== UPDATE PAGE RESPONSIVE STYLES ===============*/
+
+/* For small devices */
+@media screen and (max-width: 360px) {
+  .update-container {
+    margin-inline: 0.5rem;
+  }
+  
+  .update-header {
+    margin-bottom: 2rem;
+  }
+  
+  .update-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .update-header-item {
+    padding: 1rem;
+    flex-wrap: nowrap;
+  }
+  
+  .update-title {
+    font-size: 1rem;
+  }
+  
+  .update-arrow {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+  }
+  
+  .update-body {
+    padding: 1.5rem;
+  }
+  
+  .update-body h4 {
+    font-size: 0.95rem;
+  }
+  
+  .update-body li {
+    font-size: 0.9rem;
+  }
+  
+  .update-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .update-header h1 {
+    font-size: 2rem;
+  }
+  
+  .update-header-item {
+    padding: 1.2rem;
+  }
+  
+  .update-title {
+    font-size: 1.1rem;
+  }
+  
+  .update-body {
+    padding: 1.5rem 1.8rem;
+  }
+  
+  .update-body h4 {
+    font-size: 0.95rem;
+  }
+  
+  .update-body li {
+    font-size: 0.9rem;
+  }
+  
+  .update-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+  .update-container {
+    max-width: 900px;
+  }
+  
+  .update-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .update-title {
+    font-size: 1.3rem;
+  }
+  
+  .update-body {
+    padding: 2rem 2.5rem;
+  }
+  
+  .update-body li {
+    font-size: 1rem;
+  }
+}
+
+.update-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.update-header h1 {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.update-subtitle {
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
 }
 
 .update-container {
@@ -92,11 +404,11 @@
 }
 
 .update-content.active {
-  max-height: 1000px;
+  max-height: 3000px;
 }
 
 .update-body {
-  padding: 0 1.5rem 1.5rem;
+  padding: 1.8rem 2.2rem;
   border-top: 1px solid var(--shadow-color);
   background-color: rgba(228, 238, 255, 0.3);
 }
@@ -109,28 +421,30 @@
   color: var(--first-color);
   font-size: 1rem;
   font-weight: var(--font-semi-bold);
-  margin: 1.5rem 0 1rem;
+  margin: 1.2rem 0 0.8rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding-left: 0.2rem;
 }
 
 .update-body h4:first-child {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .update-body ul {
   list-style: none;
-  margin-left: 1rem;
+  margin-left: 0;
+  margin-bottom: 0.8rem;
 }
 
 .update-body li {
   color: var(--text-color);
-  font-size: var(--normal-font-size);
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
   position: relative;
-  padding-left: 1rem;
-  line-height: 1.5;
+  padding-left: 1.3rem;
+  line-height: 1.6;
 }
 
 .update-body li::before {
@@ -139,6 +453,33 @@
   position: absolute;
   left: 0;
   font-weight: bold;
+  font-size: 1rem;
+}
+
+/* 업데이트 푸터 */
+.update-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: var(--smaller-font-size);
+}
+
+.dark-theme .update-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.update-number {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 0.9rem;
+}
+
+.update-updated {
+  color: var(--text-color);
+  opacity: 0.7;
 }
 
 /* Loading animation */
@@ -163,12 +504,32 @@
   }
   
   .update-header-item {
-    padding: 0.75rem;
+    padding: 1rem;
   }
   
   .update-arrow {
     font-size: 1.25rem;
     margin-left: 0.5rem;
+  }
+  
+  .update-body {
+    padding: 1.5rem;
+  }
+  
+  .update-body h4 {
+    font-size: 1rem;
+  }
+  
+  .update-body li {
+    font-size: 0.95rem;
+  }
+  
+  .update-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
   }
 }
 
@@ -178,7 +539,7 @@
   }
   
   .update-header-item {
-    padding: 1rem;
+    padding: 1.2rem;
   }
   
   .update-title {
@@ -186,14 +547,276 @@
   }
   
   .update-body {
-    padding: 0 1rem 1rem;
+    padding: 1.5rem 1.8rem;
   }
   
   .update-body h4 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .update-body li {
-    font-size: var(--smaller-font-size);
+    font-size: 0.95rem;
+  }
+  
+  .update-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+.update-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.update-header h1 {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.update-subtitle {
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+}
+
+.update-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.update-item {
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px var(--shadow-color);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.update-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 28px var(--shadow-color);
+}
+
+.update-header-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+.update-header-item:hover {
+  background-color: rgba(228, 238, 255, 0.15);
+}
+
+.dark-theme .update-header-item:hover {
+  background-color: rgba(72, 85, 126, 0.15);
+}
+
+.update-info {
+  flex-grow: 1;
+}
+
+.update-title {
+  color: var(--title-color);
+  font-size: 1.25rem;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.update-date {
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  opacity: 0.8;
+}
+
+.update-arrow {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+}
+
+.update-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.update-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.update-content.active {
+  max-height: 3000px;
+}
+
+.update-body {
+  padding: 2rem 2.5rem;
+  border-top: 1px solid var(--shadow-color);
+  background-color: rgba(228, 238, 255, 0.3);
+}
+
+.dark-theme .update-body {
+  background-color: rgba(72, 85, 126, 0.1);
+}
+
+.update-body h4 {
+  color: var(--first-color);
+  font-size: 1.1rem;
+  font-weight: var(--font-semi-bold);
+  margin: 1.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.update-body h4:first-child {
+  margin-top: 0;
+}
+
+.update-body ul {
+  list-style: none;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.update-body li {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.7;
+}
+
+.update-body li::before {
+  content: "•";
+  color: var(--first-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 업데이트 푸터 */
+.update-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: var(--smaller-font-size);
+}
+
+.dark-theme .update-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.update-number {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 0.9rem;
+}
+
+.update-updated {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* Loading animation */
+.update-content.loading {
+  opacity: 0.7;
+}
+
+/*=============== UPDATE PAGE RESPONSIVE STYLES ===============*/
+
+/* For small devices */
+@media screen and (max-width: 360px) {
+  .update-container {
+    margin-inline: 0.5rem;
+  }
+  
+  .update-header {
+    margin-bottom: 2rem;
+  }
+  
+  .update-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .update-header-item {
+    padding: 1rem;
+  }
+  
+  .update-arrow {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+  }
+  
+  .update-body {
+    padding: 1.5rem;
+  }
+  
+  .update-body h4 {
+    font-size: 1rem;
+  }
+  
+  .update-body li {
+    font-size: 0.95rem;
+  }
+  
+  .update-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .update-header h1 {
+    font-size: 2rem;
+  }
+  
+  .update-header-item {
+    padding: 1.2rem;
+  }
+  
+  .update-title {
+    font-size: 1.1rem;
+  }
+  
+  .update-body {
+    padding: 1.5rem 1.8rem;
+  }
+  
+  .update-body h4 {
+    font-size: 1rem;
+  }
+  
+  .update-body li {
+    font-size: 0.95rem;
+  }
+  
+  .update-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
   }
 }
